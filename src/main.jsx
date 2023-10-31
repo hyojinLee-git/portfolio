@@ -6,11 +6,14 @@ import {
     createRoutesFromElements,
     RouterProvider,
 } from "react-router-dom";
+import RainyDay from "./containers/RainyDay/index.jsx";
+import "./style/index.css";
 
 const router = createBrowserRouter(
     createRoutesFromElements(
         <Route>
             <Route path="/" element={<App />} />
+            <Route path="/rainy-day" element={<RainyDay />} />
         </Route>
     )
 );
