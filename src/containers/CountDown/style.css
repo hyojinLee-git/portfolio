@@ -1,0 +1,13 @@
+.count-down {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.count-down > canvas {
+    position: absolute;
+    background-color: #104d6a;
+}

@@ -1,19 +1,22 @@
 import ReactDOM from "react-dom/client";
-import App from "./App.jsx";
 import {
     createBrowserRouter,
     Route,
     createRoutesFromElements,
     RouterProvider,
 } from "react-router-dom";
-import RainyDay from "./containers/RainyDay/index.jsx";
+
+import App from "./App.jsx";
 import "./style/index.css";
+import RainyDay from "./containers/RainyDay/index.jsx";
+import CountDown from "./containers/CountDown/index.jsx";
 
 const router = createBrowserRouter(
     createRoutesFromElements(
         <Route>
             <Route path="/" element={<App />} />
             <Route path="/rainy-day" element={<RainyDay />} />
+            <Route path="/count-down" element={<CountDown />} />
         </Route>
     )
 );
