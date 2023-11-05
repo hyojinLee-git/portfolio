@@ -1,18 +1,18 @@
-import { useRef, useEffect } from "react";
-import { randomNumBetween } from "../../utils/util";
-import { RainDrop } from "./RainDrop";
+import { useRef, useEffect, ReactElement } from "react";
 
 import "./style.css";
+import { RainDrop } from "./RainDrop";
+import { randomNumBetween } from "../../utils/util";
 
 export default function RainyDay() {
-    const canvasRef = useRef(null);
+    const canvasRef = useRef<HTMLCanvasElement>(null);
 
     useEffect(() => {
-        const canvas = canvasRef.current;
-        const canvasParent = canvas.parentNode;
-        const ctx = canvas.getContext("2d");
+        const canvas = canvasRef.current!;
+        const canvasParent = canvas.parentElement!;
+        const ctx = canvas.getContext("2d")!;
 
-        let canvasWidth, canvasHeight;
+        let canvasWidth: number, canvasHeight: number;
 
         function resize() {
             canvasWidth = canvasParent.clientWidth;
@@ -27,7 +27,7 @@ export default function RainyDay() {
         let now, delta;
         let then = Date.now();
 
-        const particles = [];
+        const rainDrops: RainDrop[] = [];
         const TOTAL = 20;
 
         for (let i = 0; i < TOTAL; i++) {
@@ -36,7 +36,7 @@ export default function RainyDay() {
             const radius = randomNumBetween(30, 80);
             const vy = randomNumBetween(1, 5);
             const particle = new RainDrop(x, y, radius, vy);
-            particles.push(particle);
+            rainDrops.push(particle);
         }
 
         function animate() {
@@ -49,15 +49,15 @@ export default function RainyDay() {
 
             ctx.clearRect(0, 0, canvasWidth, canvasHeight); // 이전 프레임을 지우고 새 프레임을 만듦
 
-            particles.forEach((particle) => {
-                particle.update();
-                particle.draw(ctx);
+            rainDrops.forEach((rainDrop) => {
+                rainDrop.update();
+                rainDrop.draw(ctx);
 
-                if (particle.y - particle.radius > canvasHeight) {
-                    particle.y = -particle.radius;
-                    particle.x = randomNumBetween(0, canvasWidth);
-                    particle.radius = randomNumBetween(30, 100);
-                    particle.vy = randomNumBetween(1, 5);
+                if (rainDrop.y - rainDrop.radius > canvasHeight) {
+                    rainDrop.y = -rainDrop.radius;
+                    rainDrop.x = randomNumBetween(0, canvasWidth);
+                    rainDrop.radius = randomNumBetween(30, 100);
+                    rainDrop.vy = randomNumBetween(1, 5);
                 }
             });
 
