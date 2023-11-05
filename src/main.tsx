@@ -9,13 +9,14 @@ import {
 import "./style/index.css";
 import App from "./App";
 import RainyDay from "./containers/RainyDay";
+import CountDown from "./containers/CountDown";
 
 const router = createBrowserRouter(
     createRoutesFromElements(
         <Route>
             <Route path="/" element={<App />} />
             <Route path="/rainy-day" element={<RainyDay />} />
-            {/* <Route path="/count-down" element={<CountDown />} /> */}
+            <Route path="/count-down" element={<CountDown />} />
             {/* <Route path="/fireworks" element={<Fireworks />} /> */}
         </Route>
     )

@@ -4,14 +4,14 @@ import Particle from "./Particle";
 import "./style.css";
 
 export default function CountDown() {
-    const canvasRef = useRef(null);
+    const canvasRef = useRef<HTMLCanvasElement>(null);
 
     useEffect(() => {
-        const canvas = canvasRef.current;
-        const canvasParent = canvas.parentNode;
-        const ctx = canvas.getContext("2d");
+        const canvas = canvasRef.current!;
+        const canvasParent = canvas.parentElement!;
+        const ctx = canvas.getContext("2d")!;
 
-        let canvasWidth, canvasHeight;
+        let canvasWidth: number, canvasHeight: number;
 
         function resize() {
             canvasWidth = canvasParent.clientWidth;
@@ -26,7 +26,7 @@ export default function CountDown() {
         let now, delta;
         let then = Date.now();
 
-        const particles = [];
+        const particles: Particle[] = [];
         const PARTICLE_NUM = 1000;
 
         function createRing() {
@@ -72,7 +72,9 @@ export default function CountDown() {
                 {
                     ...countDownOption,
                     delay: 1,
-                    onStart: () => (texts[0].style.opacity = 0),
+                    onStart: () => {
+                        texts[0].style.opacity = "0";
+                    },
                 }
             );
             gsap.fromTo(
@@ -81,7 +83,9 @@ export default function CountDown() {
                 {
                     ...countDownOption,
                     delay: 2,
-                    onStart: () => (texts[1].style.opacity = 0),
+                    onStart: () => {
+                        texts[1].style.opacity = "0";
+                    },
                 }
             );
 
@@ -95,7 +99,7 @@ export default function CountDown() {
                     delay: 3,
                     onStart: () => {
                         createRing();
-                        texts[2].style.opacity = 0;
+                        texts[2].style.opacity = "0";
                     },
                 }
             );

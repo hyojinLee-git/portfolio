@@ -1,6 +1,17 @@
 import { randomNumBetween } from "../../utils/util";
 
 export default class Particle {
+    rFriction: number;
+    rAlpha: number;
+    r: number;
+
+    angleFriction: number;
+    angleAlpha: number;
+    angle: number;
+    opacity: number;
+
+    x: number;
+    y: number;
     constructor() {
         this.rFriction = randomNumBetween(0.95, 1.01);
         this.rAlpha = randomNumBetween(0, 5);
@@ -10,7 +21,9 @@ export default class Particle {
         this.angleAlpha = randomNumBetween(1, 2);
         this.angle = randomNumBetween(0, 360);
 
-        this.opacity = (0.2, 1);
+        this.opacity = randomNumBetween(0.2, 1);
+        this.x = 0;
+        this.y = 0;
     }
 
     update() {
@@ -28,7 +41,7 @@ export default class Particle {
         this.opacity -= 0.003;
     }
 
-    draw(ctx) {
+    draw(ctx: CanvasRenderingContext2D) {
         ctx.beginPath();
         ctx.arc(this.x, this.y, 1, 0, Math.PI * 2);
         ctx.fillStyle = `rgba(255,255,255,${this.opacity})`;
