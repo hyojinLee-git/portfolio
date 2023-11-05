@@ -10,6 +10,7 @@ import App from "./App.jsx";
 import "./style/index.css";
 import RainyDay from "./containers/RainyDay/index.jsx";
 import CountDown from "./containers/CountDown/index.jsx";
+import Fireworks from "./containers/Fireworks/index.jsx";
 
 const router = createBrowserRouter(
     createRoutesFromElements(
@@ -17,6 +18,7 @@ const router = createBrowserRouter(
             <Route path="/" element={<App />} />
             <Route path="/rainy-day" element={<RainyDay />} />
             <Route path="/count-down" element={<CountDown />} />
+            <Route path="/fireworks" element={<Fireworks />} />
         </Route>
     )
 );
