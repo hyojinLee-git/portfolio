@@ -13,6 +13,7 @@ import CountDown from "./containers/CountDown";
 import Fireworks from "./containers/Fireworks";
 import BounceString from "./containers/BouceString";
 import Rope from "./containers/Rope";
+import Gui from "./containers/Gui";
 
 const router = createBrowserRouter(
     createRoutesFromElements(
@@ -23,6 +24,7 @@ const router = createBrowserRouter(
             <Route path="/fireworks" element={<Fireworks />} />
             <Route path="/bounce-string" element={<BounceString />} />
             <Route path="/rope" element={<Rope />} />
+            <Route path="/gui" element={<Gui />} />
         </Route>
     )
 );
