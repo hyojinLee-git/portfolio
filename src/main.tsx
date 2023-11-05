@@ -10,6 +10,7 @@ import "./style/index.css";
 import App from "./App";
 import RainyDay from "./containers/RainyDay";
 import CountDown from "./containers/CountDown";
+import Fireworks from "./containers/Fireworks";
 
 const router = createBrowserRouter(
     createRoutesFromElements(
@@ -17,7 +18,7 @@ const router = createBrowserRouter(
             <Route path="/" element={<App />} />
             <Route path="/rainy-day" element={<RainyDay />} />
             <Route path="/count-down" element={<CountDown />} />
-            {/* <Route path="/fireworks" element={<Fireworks />} /> */}
+            <Route path="/fireworks" element={<Fireworks />} />
         </Route>
     )
 );
