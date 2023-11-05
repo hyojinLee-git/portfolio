@@ -11,6 +11,7 @@ import App from "./App";
 import RainyDay from "./containers/RainyDay";
 import CountDown from "./containers/CountDown";
 import Fireworks from "./containers/Fireworks";
+import BounceString from "./containers/BouceString";
 
 const router = createBrowserRouter(
     createRoutesFromElements(
@@ -19,6 +20,7 @@ const router = createBrowserRouter(
             <Route path="/rainy-day" element={<RainyDay />} />
             <Route path="/count-down" element={<CountDown />} />
             <Route path="/fireworks" element={<Fireworks />} />
+            <Route path="/bounce-string" element={<BounceString />} />
         </Route>
     )
 );
