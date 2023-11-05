@@ -47,6 +47,8 @@ export default function Rope() {
     }, []);
     return (
         <div className="rope">
+            <img src="/Rope/glowing.png" id="light-img" />
+
             <canvas ref={canvasRef}></canvas>
         </div>
     );
