@@ -1,6 +1,9 @@
+import "./style.css";
+
 export default function Navigator() {
     return (
         <nav>
+            <div>logo</div>
             <ul>
                 <li>Home</li>
                 <li>About</li>
