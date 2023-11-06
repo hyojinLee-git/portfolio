@@ -19,6 +19,8 @@ export default function BounceString() {
             canvas.style.height = canvasHeight + "px";
             canvas.width = canvasWidth;
             canvas.height = canvasHeight;
+
+            initString();
         }
 
         let interval = 1000 / 60;
@@ -30,26 +32,28 @@ export default function BounceString() {
         let moveY = -5000;
         let isDown = false;
 
-        const xGap = 20;
-        const yGap = 20;
-        const x1 = xGap;
-        const x2 = canvas.width - xGap;
-        const total = Math.floor((canvas.height - yGap) / yGap);
+        function initString() {
+            const xGap = 20;
+            const yGap = 20;
+            const x1 = xGap;
+            const x2 = canvas.width - xGap;
+            const total = Math.floor((canvas.height - yGap) / yGap);
 
-        for (let i = 0; i < total; i++) {
-            strings[i] = new String(
-                {
-                    // 선의 왼쪽 x위치
-                    x1: x1,
-                    // 선의 왼쪽 y위치
-                    y1: i * yGap + yGap,
-                    // 선의 오른쪽 x위치
-                    x2: x2,
-                    // 선의 오른쪽 y위치
-                    y2: i * yGap + yGap,
-                },
-                "#ff5038"
-            );
+            for (let i = 0; i < total; i++) {
+                strings[i] = new String(
+                    {
+                        // 선의 왼쪽 x위치
+                        x1: x1,
+                        // 선의 왼쪽 y위치
+                        y1: i * yGap + yGap,
+                        // 선의 오른쪽 x위치
+                        x2: x2,
+                        // 선의 오른쪽 y위치
+                        y2: i * yGap + yGap,
+                    },
+                    "#ff5038"
+                );
+            }
         }
 
         function animate() {
@@ -86,7 +90,7 @@ export default function BounceString() {
             }
         }
 
-        function onUp(e: MouseEvent) {
+        function onUp() {
             isDown = false;
 
             moveX = -5000;
