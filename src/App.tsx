@@ -1,13 +1,14 @@
+import Section2 from "./containers/Sections/Section2";
 import Navigator from "./layouts/Navigator";
+import { PROJECT_LIST } from "./models/project";
 
 function App() {
     return (
         <>
             <Navigator />
             <main>
-                <section>
-                    <h2>Projects</h2>
-                </section>
+                <section className="section1"></section>
+                <Section2 />
             </main>
         </>
     );
