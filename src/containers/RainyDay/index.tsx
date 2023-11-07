@@ -21,6 +21,8 @@ export default function RainyDay() {
             canvas.style.height = canvasHeight + "px";
             canvas.width = canvasWidth;
             canvas.height = canvasHeight;
+
+            initRainDrop();
         }
 
         let interval = 1000 / 60;
@@ -30,13 +32,15 @@ export default function RainyDay() {
         const rainDrops: RainDrop[] = [];
         const TOTAL = 20;
 
-        for (let i = 0; i < TOTAL; i++) {
-            const x = randomNumBetween(0, canvas.width);
-            const y = randomNumBetween(0, canvas.height);
-            const radius = randomNumBetween(30, 80);
-            const vy = randomNumBetween(1, 5);
-            const particle = new RainDrop(x, y, radius, vy);
-            rainDrops.push(particle);
+        function initRainDrop() {
+            for (let i = 0; i < TOTAL; i++) {
+                const x = randomNumBetween(0, canvasWidth);
+                const y = randomNumBetween(0, canvasHeight);
+                const radius = randomNumBetween(30, 80);
+                const vy = randomNumBetween(1, 5);
+                const particle = new RainDrop(x, y, radius, vy);
+                rainDrops.push(particle);
+            }
         }
 
         function animate() {
