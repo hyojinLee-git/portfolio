@@ -3,6 +3,7 @@ import { useRef, useEffect, ReactElement } from "react";
 import "./style.css";
 import { RainDrop } from "./RainDrop";
 import { randomNumBetween } from "../../utils/util";
+import { Mouse } from "./Mouse";
 
 export default function RainyDay() {
     const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -32,6 +33,8 @@ export default function RainyDay() {
         const rainDrops: RainDrop[] = [];
         const TOTAL = 20;
 
+        const mouse = new Mouse(canvas);
+
         function initRainDrop() {
             for (let i = 0; i < TOTAL; i++) {
                 const x = randomNumBetween(0, canvasWidth);
@@ -54,7 +57,7 @@ export default function RainyDay() {
             ctx.clearRect(0, 0, canvasWidth, canvasHeight); // 이전 프레임을 지우고 새 프레임을 만듦
 
             rainDrops.forEach((rainDrop) => {
-                rainDrop.update();
+                rainDrop.update(mouse);
                 rainDrop.draw(ctx);
 
                 if (rainDrop.y - rainDrop.radius > canvasHeight) {
