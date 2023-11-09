@@ -5,6 +5,8 @@
     justify-content: center;
     align-items: center;
     position: relative;
+    cursor: url("/public/common/umbrella.png"), auto;
+    /* cursor: url("/public/common/Rectangle.png"), auto; */
 }
 
 .rainy-day > canvas {
