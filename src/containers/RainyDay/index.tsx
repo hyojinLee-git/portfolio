@@ -4,6 +4,7 @@ import "./style.css";
 import { RainDrop } from "./RainDrop";
 import { randomNumBetween } from "../../utils/util";
 import { Mouse } from "./Mouse";
+import { Particle } from "./Particle";
 
 export default function RainyDay() {
     const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -33,6 +34,9 @@ export default function RainyDay() {
         const rainDrops: RainDrop[] = [];
         const TOTAL = 20;
 
+        const particleTotal = randomNumBetween(30, 80);
+        const particles: Particle[] = [];
+
         const mouse = new Mouse(canvas);
 
         function initRainDrop() {
@@ -46,6 +50,12 @@ export default function RainyDay() {
             }
         }
 
+        function createParticles(x: number, y: number) {
+            for (let i = 0; i < particleTotal; i++) {
+                particles.push(new Particle(x, y + i, 1));
+            }
+        }
+
         function animate() {
             window.requestAnimationFrame(animate); // 프레임을 무한으로 생성
 
@@ -56,8 +66,8 @@ export default function RainyDay() {
 
             ctx.clearRect(0, 0, canvasWidth, canvasHeight); // 이전 프레임을 지우고 새 프레임을 만듦
 
-            rainDrops.forEach((rainDrop) => {
-                rainDrop.update(mouse);
+            rainDrops.forEach((rainDrop, idx) => {
+                rainDrop.update();
                 rainDrop.draw(ctx);
 
                 if (rainDrop.y - rainDrop.radius > canvasHeight) {
@@ -66,6 +76,24 @@ export default function RainyDay() {
                     rainDrop.radius = randomNumBetween(30, 100);
                     rainDrop.vy = randomNumBetween(1, 5);
                 }
+
+                if (
+                    mouse.y <= rainDrop.y + rainDrop.radius &&
+                    rainDrop.y + rainDrop.radius <= mouse.y + 128 &&
+                    mouse.x <= rainDrop.x &&
+                    rainDrop.x <= mouse.x + 128
+                ) {
+                    // create particle
+                    createParticles(rainDrop.x, rainDrop.y);
+                    rainDrops.splice(idx, 1);
+                }
+            });
+
+            particles.forEach((particle, idx) => {
+                particle.update();
+                particle.draw(ctx);
+
+                if (particle.opacity < 0) particles.splice(idx, 1);
             });
 
             then = now - (delta % interval);
