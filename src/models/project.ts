@@ -2,7 +2,7 @@ export const MENU_LIST = [
     { title: "Home" },
     { title: "About" },
     { title: "Projects" },
-    { title: "Contact" },
+    { title: "Prize" },
 ];
 
 export const PROJECT_LIST = [
@@ -11,5 +11,5 @@ export const PROJECT_LIST = [
     { title: "Count Down", thumbnail: "", link: "/count-down" },
     { title: "Firworks", thumbnail: "", link: "/fireworks" },
     { title: "Gui", thumbnail: "", link: "/gui" },
-    { title: "Rope", thumbnail: "", link: "rope" },
+    { title: "Rope", thumbnail: "", link: "/rope" },
 ];
