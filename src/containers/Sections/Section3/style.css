@@ -1,4 +1,4 @@
-.section2 {
+.section3 {
     background-color: #eee;
     display: flex;
     flex-direction: column;
@@ -7,12 +7,12 @@
     padding: 0 20px;
 }
 
-.section2 > h2 {
+.section3 > h2 {
     font-size: 40px;
     margin-bottom: 60px;
 }
 
-.section2 > ul {
+.section3 > ul {
     width: 100%;
     display: grid;
     grid-template-columns: repeat(auto-fill, 250px);
@@ -20,20 +20,20 @@
     justify-content: center;
 }
 
-.section2 > ul > li {
+.section3 > ul > li {
     width: 250px;
     height: 200px;
     background-color: #fff;
     border-radius: 5px;
     position: relative;
 }
-.section2 > ul > li > a {
+.section3 > ul > li > a {
     width: 100%;
     height: 100%;
     display: block;
 }
 
-.section2 > ul > li > a > .title {
+.section3 > ul > li > a > .title {
     border-top: 1px solid;
     width: 100%;
     position: absolute;

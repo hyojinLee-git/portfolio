@@ -2,9 +2,9 @@ import { PROJECT_LIST } from "../../../models/project";
 
 import "./style.css";
 
-export default function Section2() {
+export default function Section3() {
     return (
-        <section className="section2">
+        <section className="section3">
             <h2>Projects</h2>
             <ul>
                 {PROJECT_LIST.map((project) => (
