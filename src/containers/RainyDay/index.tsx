@@ -34,7 +34,7 @@ export default function RainyDay() {
         const rainDrops: RainDrop[] = [];
         const TOTAL = 20;
 
-        const particleTotal = randomNumBetween(30, 80);
+        const particleTotal = randomNumBetween(50, 80);
         const particles: Particle[] = [];
 
         const mouse = new Mouse(canvas);
@@ -52,7 +52,7 @@ export default function RainyDay() {
 
         function createParticles(x: number, y: number) {
             for (let i = 0; i < particleTotal; i++) {
-                particles.push(new Particle(x, y + i, 1));
+                particles.push(new Particle(x, y - 10 + i, 1));
             }
         }
 

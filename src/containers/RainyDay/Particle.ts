@@ -14,7 +14,7 @@ export class Particle {
         this.x = x;
         this.y = y;
         this.vx = randomNumBetween(-5, 5);
-        this.vy = 0;
+        this.vy = randomNumBetween(-3, 0);
         this.gravity = 0.12;
         this.friction = 0.98;
         this.opacity = opacity;
