@@ -79,13 +79,20 @@ export default function RainyDay() {
 
                 if (
                     mouse.y <= rainDrop.y + rainDrop.radius &&
-                    rainDrop.y + rainDrop.radius <= mouse.y + 128 &&
+                    rainDrop.y + rainDrop.radius <= mouse.y + 64 &&
                     mouse.x <= rainDrop.x &&
                     rainDrop.x <= mouse.x + 128
                 ) {
                     // create particle
                     createParticles(rainDrop.x, rainDrop.y);
                     rainDrops.splice(idx, 1);
+
+                    // add new rain drop
+                    const x = randomNumBetween(0, canvasWidth);
+                    const y = randomNumBetween(0, canvasHeight);
+                    const radius = randomNumBetween(30, 80);
+                    const vy = randomNumBetween(1, 5);
+                    rainDrops.push(new RainDrop(x, y, radius, vy));
                 }
             });
 
