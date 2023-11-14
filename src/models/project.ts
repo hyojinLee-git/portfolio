@@ -1,6 +1,7 @@
 export const MENU_LIST = [
     { title: "Home" },
     { title: "About" },
+    { title: "Work Experience" },
     { title: "Projects" },
     { title: "Prize" },
 ];
