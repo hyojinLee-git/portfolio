@@ -8,7 +8,6 @@ export class Mouse {
             canvas.addEventListener("mousemove", (e) => {
                 this.x = e.clientX;
                 this.y = e.clientY;
-                // console.log(e.clientX, e.clientY, this.x, this.y);
             });
         }
     }
