@@ -6,10 +6,26 @@ export const MENU_LIST = [
 ];
 
 export const PROJECT_LIST = [
-    { title: "Bounce String", thumbnail: "", link: "/bounce-string" },
-    { title: "Rainy Day", thumbnail: "", link: "/rainy-day" },
-    { title: "Count Down", thumbnail: "", link: "/count-down" },
-    { title: "Firworks", thumbnail: "", link: "/fireworks" },
-    { title: "Gui", thumbnail: "", link: "/gui" },
-    { title: "Rope", thumbnail: "", link: "/rope" },
+    {
+        title: "Bounce String",
+        thumbnail: "/public/thumbnails/BounceString.png",
+        link: "/bounce-string",
+    },
+    {
+        title: "Rainy Day",
+        thumbnail: "/public/thumbnails/RainyDay.png",
+        link: "/rainy-day",
+    },
+    {
+        title: "Count Down",
+        thumbnail: "/public/thumbnails/CountDown.png",
+        link: "/count-down",
+    },
+    {
+        title: "Firworks",
+        thumbnail: "/public/thumbnails/Fireworks.png",
+        link: "/fireworks",
+    },
+    { title: "Gui", thumbnail: "/public/thumbnails/Gui.png", link: "/gui" },
+    { title: "Rope", thumbnail: "/public/thumbnails/Rope.png", link: "/rope" },
 ];

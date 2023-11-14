@@ -33,11 +33,16 @@
     display: block;
 }
 
+.section3 > ul > li > a > img {
+    width: 100%;
+    border-radius: 5px;
+}
+
 .section3 > ul > li > a > .title {
-    border-top: 1px solid;
     width: 100%;
     position: absolute;
     bottom: 0;
     padding: 10px;
     font-size: 20px;
+    background-color: white;
 }
