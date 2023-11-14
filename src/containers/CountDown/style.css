@@ -5,6 +5,7 @@
     justify-content: center;
     align-items: center;
     position: relative;
+    overflow: hidden;
 }
 
 .count-down > canvas {
@@ -13,14 +14,14 @@
 }
 
 .count-down > #ring {
-    width: 75vh;
-    height: 75vh;
+    width: 75vmin;
+    height: 75vmin;
     position: absolute;
-    border: 1px solid white;
     border: 1px solid transparent;
     border-radius: 50%;
     background-image: linear-gradient(#000, #000),
         linear-gradient(45deg, white 0%, black 40%, black 60%, white 100%);
+
     background-origin: border-box;
     background-clip: content-box, border-box;
 }

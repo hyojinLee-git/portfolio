@@ -89,9 +89,9 @@ export default function CountDown() {
                 }
             );
 
-            const ringImg = document.querySelector("#ring");
+            const ring = document.querySelector("#ring");
             gsap.fromTo(
-                ringImg,
+                ring,
                 { opacity: 1 },
                 {
                     opacity: 0,
@@ -118,8 +118,8 @@ export default function CountDown() {
 
     return (
         <div className="count-down">
-            <div id="ring"></div>
             <canvas ref={canvasRef}></canvas>
+            <div id="ring"></div>
             <div id="countdown">
                 <span>3</span>
                 <span>2</span>
