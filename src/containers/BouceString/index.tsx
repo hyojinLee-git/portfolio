@@ -77,16 +77,26 @@ export default function BounceString() {
             }
         }
 
-        function onDown(e: MouseEvent) {
+        function onDown(e: MouseEvent | TouchEvent) {
             isDown = true;
-            moveX = e.clientX;
-            moveY = e.clientY;
-        }
-
-        function onMove(e: MouseEvent) {
-            if (isDown) {
+            if ("touches" in e) {
+                moveX = e.touches[0].clientX;
+                moveY = e.touches[0].clientY;
+            } else {
                 moveX = e.clientX;
                 moveY = e.clientY;
+            }
+        }
+
+        function onMove(e: MouseEvent | TouchEvent) {
+            if (isDown) {
+                if ("touches" in e) {
+                    moveX = e.touches[0].clientX;
+                    moveY = e.touches[0].clientY;
+                } else {
+                    moveX = e.clientX;
+                    moveY = e.clientY;
+                }
             }
         }
 
@@ -105,11 +115,20 @@ export default function BounceString() {
         canvas.addEventListener("mousemove", onMove);
         canvas.addEventListener("mouseup", onUp);
 
+        canvas.addEventListener("touchstart", onDown);
+        canvas.addEventListener("touchmove", onMove);
+        canvas.addEventListener("touchend", onUp);
+
         return () => {
             window.removeEventListener("resize", resize);
+
             canvas.removeEventListener("mousedown", onDown);
             canvas.removeEventListener("mousemove", onMove);
             canvas.removeEventListener("mouseup", onUp);
+
+            canvas.removeEventListener("touchstart", onDown);
+            canvas.removeEventListener("touchmove", onMove);
+            canvas.removeEventListener("touchend", onUp);
         };
     }, []);
 
