@@ -1,10 +1,14 @@
 nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     padding: 20px;
     min-width: 768px;
     position: relative;
+    width: 100%;
+}
+nav > #hamburger_button {
+    display: none;
 }
 
 nav > .nav__logo {
@@ -53,7 +57,7 @@ nav > ul > .active {
     border-bottom-right-radius: 20px;
     padding: 15px 20px;
     box-shadow: 2px 4px 6px 0px rgba(0, 0, 0, 0.06);
-    animation: slideDown 1s;
+    animation: slideDown 0.8s;
     z-index: 0;
 }
 
@@ -102,6 +106,7 @@ nav > ul > .active {
 @media (max-width: 768px) {
     nav {
         min-width: 576px;
+        width: 100%;
     }
 }
 
@@ -109,6 +114,10 @@ nav > ul > .active {
     nav {
         min-width: 0;
         width: 100%;
+        justify-content: space-between;
+    }
+    nav > #hamburger_button {
+        display: inline;
     }
     nav > ul {
         display: none;

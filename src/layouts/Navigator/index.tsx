@@ -22,7 +22,11 @@ export default function Navigator() {
                     </li>
                 ))}
             </ul>
-            <button onClick={() => setShowMenu(true)} className="nav__menu">
+            <button
+                id="hamburger_button"
+                onClick={() => setShowMenu(true)}
+                className="nav__menu"
+            >
                 <div />
                 <div />
                 <div />
