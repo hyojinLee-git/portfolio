@@ -4,7 +4,7 @@ export default function Section1() {
     return (
         <section className="section1" id="home">
             <div>
-                <img src="/public/common/profile.png" />
+                <img src="/common/profile.png" />
             </div>
             <div className="information">
                 <h1>이효진(Lee HyoJin)</h1>

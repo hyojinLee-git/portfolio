@@ -9,30 +9,30 @@ export const MENU_LIST = [
 export const PROJECT_LIST = [
     {
         title: "Bounce String",
-        thumbnail: "/public/thumbnails/BounceString.png",
+        thumbnail: "/thumbnails/BounceString.png",
         link: "/bounce-string",
     },
     {
         title: "Rainy Day",
-        thumbnail: "/public/thumbnails/RainyDay.png",
+        thumbnail: "/thumbnails/RainyDay.png",
         link: "/rainy-day",
     },
     {
         title: "Count Down",
-        thumbnail: "/public/thumbnails/CountDown.png",
+        thumbnail: "/thumbnails/CountDown.png",
         link: "/count-down",
     },
     {
         title: "Firworks",
-        thumbnail: "/public/thumbnails/Fireworks.png",
+        thumbnail: "/thumbnails/Fireworks.png",
         link: "/fireworks",
     },
-    { title: "Gui", thumbnail: "/public/thumbnails/Gui.png", link: "/gui" },
-    { title: "Rope", thumbnail: "/public/thumbnails/Rope.png", link: "/rope" },
+    { title: "Gui", thumbnail: "/thumbnails/Gui.png", link: "/gui" },
+    { title: "Rope", thumbnail: "/thumbnails/Rope.png", link: "/rope" },
     {
         title: "서울가로수",
-        thumbnail: "/public/thumbnails/SeoulGarosu.png",
+        thumbnail: "/thumbnails/SeoulGarosu.png",
         link: "seoul-garosu",
     },
-    { title: "IZEL", thumbnail: "/public/thumbnails/IZEL.png", link: "/izel" },
+    { title: "IZEL", thumbnail: "/thumbnails/IZEL.png", link: "/izel" },
 ];

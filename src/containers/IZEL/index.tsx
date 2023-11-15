@@ -4,7 +4,7 @@ export default function IZEL() {
     return (
         <div className="izel">
             <video controls>
-                <source src="/public/IZEL/IZEL_demo.mp4" />
+                <source src="/IZEL/IZEL_demo.mp4" />
             </video>
             <h2>💡 Topic</h2>
             <p>

@@ -4,7 +4,7 @@ export default function SeoulGarosu() {
     return (
         <div className="seoul-garosu">
             <video controls>
-                <source src="/public/SeoulGarosu/demo.mp4" />
+                <source src="/SeoulGarosu/demo.mp4" />
             </video>
             <h2>💡 Topic</h2>
             <p>
