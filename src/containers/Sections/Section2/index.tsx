@@ -3,7 +3,7 @@ import "./style.css";
 export default function Section2() {
     return (
         <section className="section2">
-            <h2>About Me</h2>
+            <h2 id="about">About Me</h2>
             <p>
                 스펀지 같은 흡수력을 가진 개발자입니다. 첫 회사에 입사해 일을
                 하면서 그동안 프론트엔드 공부를 하며 습득에 어려움을 겪었던

@@ -1,10 +1,21 @@
 import { useState } from "react";
+
 import "./style.css";
 import { MENU_LIST } from "../../models/project";
 
 export default function Navigator() {
     const [currentMenu, setCurrentMenu] = useState(0);
     const [showMenu, setShowMenu] = useState(false);
+
+    const handleNavMenu = (
+        e: React.MouseEvent<HTMLAnchorElement, MouseEvent>,
+        id: string
+    ) => {
+        e.preventDefault();
+        const target = document.getElementById(id);
+        target?.scrollIntoView({ behavior: "smooth", block: "center" });
+        setShowMenu(false);
+    };
 
     return (
         <nav>
@@ -18,7 +29,12 @@ export default function Navigator() {
                         className={idx === currentMenu ? "active" : ""}
                         onClick={() => setCurrentMenu(idx)}
                     >
-                        <a>{menu.title}</a>
+                        <a
+                            href={`/#${menu.hash}`}
+                            onClick={(e) => handleNavMenu(e, menu.hash)}
+                        >
+                            {menu.title}
+                        </a>
                     </li>
                 ))}
             </ul>
@@ -44,7 +60,12 @@ export default function Navigator() {
                                 className={idx === currentMenu ? "active" : ""}
                                 onClick={() => setCurrentMenu(idx)}
                             >
-                                <a>{menu.title}</a>
+                                <a
+                                    href={`/#${menu.hash}`}
+                                    onClick={(e) => handleNavMenu(e, menu.hash)}
+                                >
+                                    {menu.title}
+                                </a>
                             </li>
                         ))}
                     </ul>

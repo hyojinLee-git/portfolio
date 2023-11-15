@@ -1,9 +1,9 @@
 export const MENU_LIST = [
-    { title: "Home" },
-    { title: "About" },
-    { title: "Work Experience" },
-    { title: "Projects" },
-    { title: "Prize" },
+    { title: "Home", hash: "home" },
+    { title: "About", hash: "about" },
+    { title: "Work Experience", hash: "work-experience" },
+    { title: "Projects", hash: "projects" },
+    { title: "Prize", hash: "prize" },
 ];
 
 export const PROJECT_LIST = [

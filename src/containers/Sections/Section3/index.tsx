@@ -3,7 +3,7 @@ import "./style.css";
 export default function Section3() {
     return (
         <section className="section3">
-            <h2>Work Experice</h2>
+            <h2 id="work-experience">Work Experice</h2>
             <h3>픽앤주식회사(2022.03~현재)</h3>
             <ul>
                 <li>

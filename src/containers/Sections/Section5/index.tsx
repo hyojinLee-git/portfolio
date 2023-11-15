@@ -3,7 +3,7 @@ import "./style.css";
 export default function Section5() {
     return (
         <section className="section5">
-            <h2>Prize</h2>
+            <h2 id="prize">Prize</h2>
             <ul>
                 <li>대전광역시 공공데이터 활용 경진대회 입선 2022.09.01</li>
                 <li>

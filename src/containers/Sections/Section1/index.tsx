@@ -2,7 +2,7 @@ import "./style.css";
 
 export default function Section1() {
     return (
-        <section className="section1">
+        <section className="section1" id="home">
             <div>
                 <img src="/public/common/profile.png" />
             </div>
