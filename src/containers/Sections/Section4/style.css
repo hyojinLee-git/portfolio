@@ -12,6 +12,7 @@
     font-size: 40px;
     margin-bottom: 60px;
     font-weight: 500;
+    color: var(--color-theme4);
 }
 
 .section4 > ul {

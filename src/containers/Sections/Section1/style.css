@@ -18,6 +18,7 @@
 .section1 > .information > h1 {
     font-size: 2rem;
     font-weight: 700;
+    color: var(--color-theme4);
 }
 
 .section1 address {

@@ -8,6 +8,7 @@
     text-align: center;
     font-weight: 500;
     margin-bottom: 60px;
+    color: var(--color-theme4);
 }
 .section3 > h3 {
     font-size: 1.5rem;
