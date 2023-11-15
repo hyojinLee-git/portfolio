@@ -12,7 +12,11 @@ export default function Section1() {
                     <h3>contact</h3>
                     <ul>
                         <li>splato8899@gmail.com</li>
-                        <li>github</li>
+                        <li>
+                            <a href="https://github.com/hyojinLee-git">
+                                github
+                            </a>
+                        </li>
                     </ul>
                 </address>
             </div>
