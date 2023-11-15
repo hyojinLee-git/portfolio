@@ -8,7 +8,9 @@ export default function Navigator() {
 
     return (
         <nav>
-            <div className="nav__logo">HyoJin</div>
+            <a href="/#" className="nav__logo">
+                HyoJin
+            </a>
             <ul>
                 {MENU_LIST.map((menu, idx) => (
                     <li
@@ -20,14 +22,30 @@ export default function Navigator() {
                     </li>
                 ))}
             </ul>
-            <button
-                onClick={() => setShowMenu(!showMenu)}
-                className="nav__menu"
-            >
+            <button onClick={() => setShowMenu(true)} className="nav__menu">
                 <div />
                 <div />
                 <div />
             </button>
+            {showMenu && (
+                <div id="hamburger_menu">
+                    <button onClick={() => setShowMenu(false)}>
+                        <div id="right" />
+                        <div id="left" />
+                    </button>
+                    <ul>
+                        {MENU_LIST.map((menu, idx) => (
+                            <li
+                                key={menu.title}
+                                className={idx === currentMenu ? "active" : ""}
+                                onClick={() => setCurrentMenu(idx)}
+                            >
+                                <a>{menu.title}</a>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+            )}
         </nav>
     );
 }

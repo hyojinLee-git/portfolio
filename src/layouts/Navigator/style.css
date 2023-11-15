@@ -4,6 +4,7 @@ nav {
     align-items: center;
     padding: 20px;
     min-width: 768px;
+    position: relative;
 }
 
 nav > .nav__logo {
@@ -28,6 +29,71 @@ nav > ul > li:hover {
 }
 
 nav > ul > .active {
+    color: var(--color-theme4);
+    font-size: 16px;
+    font-weight: 500;
+}
+
+@keyframes slideDown {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+#hamburger_menu {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background-color: white;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding: 15px 20px;
+    box-shadow: 2px 4px 6px 0px rgba(0, 0, 0, 0.06);
+    animation: slideDown 1s;
+    z-index: 0;
+}
+
+#hamburger_menu > button > div {
+    height: 3px;
+    width: 20px;
+    background-color: var(--color-theme4);
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+#hamburger_menu > button > #left {
+    transform: rotate(138deg);
+    transform-origin: center;
+}
+
+#hamburger_menu > button > #right {
+    transform: rotate(48deg);
+    transform-origin: center;
+}
+
+#hamburger_menu > ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 5px;
+}
+
+#hamburger_menu > ul > li {
+    color: var(--color-theme1);
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 22px;
+}
+
+#hamburger_menu > ul > li:hover {
+    color: var(--color-theme4);
+}
+
+#hamburger_menu > ul > .active {
     color: var(--color-theme4);
     font-size: 16px;
     font-weight: 500;
