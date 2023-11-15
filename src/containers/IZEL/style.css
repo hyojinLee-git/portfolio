@@ -1,0 +1,23 @@
+.izel {
+    padding: 3rem;
+    line-height: 22px;
+}
+.izel > video {
+    width: 100%;
+}
+.izel > h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    margin-top: 1.5rem;
+    line-height: 32px;
+    font-weight: 700;
+}
+.izel > ul {
+    list-style: inside;
+}
+.izel > ul > li {
+    list-style: inside;
+    text-indent: -20px;
+    padding-left: 20px;
+    margin-bottom: 0.5rem;
+}
