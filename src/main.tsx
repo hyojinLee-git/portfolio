@@ -29,6 +29,7 @@ const router = createBrowserRouter(
             <Route path="/gui" element={<Gui />} />
             <Route path="/seoul-garosu" element={<SeoulGarosu />} />
             <Route path="/izel" element={<IZEL />} />
+            <Route path="/*" element={<App />} />
         </Route>
     )
 );
