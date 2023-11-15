@@ -11,7 +11,9 @@ export default function Section4() {
                     <li key={project.title}>
                         <a href={project.link}>
                             <img src={project.thumbnail} />
-                            <div className="title">{project.title}</div>
+                            <div className="title">
+                                <div>{project.title}</div>
+                            </div>
                         </a>
                     </li>
                 ))}
