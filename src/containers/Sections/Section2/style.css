@@ -16,3 +16,7 @@
 .section2 > p {
     margin-bottom: 30px;
 }
+
+.section2 a {
+    color: var(--color-theme2);
+}
