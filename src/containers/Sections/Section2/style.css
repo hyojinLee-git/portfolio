@@ -1,0 +1,16 @@
+.section2 {
+    padding: 0 3rem;
+    line-height: 22px;
+    background-color: #eee;
+}
+
+.section2 > h2 {
+    font-size: 3rem;
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 60px;
+}
+
+.section2 > p {
+    margin-bottom: 30px;
+}

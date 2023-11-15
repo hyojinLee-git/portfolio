@@ -1,0 +1,8 @@
+.section1 {
+    /* border: 1px solid red; */
+    height: 500px;
+}
+
+.section1 > h1 {
+    font-size: 48px;
+}
