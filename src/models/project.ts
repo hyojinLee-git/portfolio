@@ -29,4 +29,10 @@ export const PROJECT_LIST = [
     },
     { title: "Gui", thumbnail: "/public/thumbnails/Gui.png", link: "/gui" },
     { title: "Rope", thumbnail: "/public/thumbnails/Rope.png", link: "/rope" },
+    {
+        title: "서울가로수",
+        thumbnail: "/public/thumbnails/SeoulGarosu.png",
+        link: "seoul-garosu",
+    },
+    { title: "IZEL", thumbnail: "/public/thumbnails/IZEL.png", link: "/izel" },
 ];

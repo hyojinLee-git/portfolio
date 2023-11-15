@@ -5,7 +5,7 @@ import "./style.css";
 export default function Section4() {
     return (
         <section className="section4">
-            <h2>Canvas Projects</h2>
+            <h2>Projects</h2>
             <ul>
                 {PROJECT_LIST.map((project) => (
                     <li key={project.title}>
