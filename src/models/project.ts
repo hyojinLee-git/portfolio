@@ -23,7 +23,7 @@ export const PROJECT_LIST = [
         link: "/count-down",
     },
     {
-        title: "Firworks",
+        title: "Fireworks",
         thumbnail: "/thumbnails/Fireworks.png",
         link: "/fireworks",
     },
