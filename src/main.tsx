@@ -14,6 +14,7 @@ import Fireworks from "./containers/Fireworks";
 import BounceString from "./containers/BouceString";
 import Rope from "./containers/Rope";
 import Gui from "./containers/Gui";
+import SeoulGarosu from "./containers/SeoulGarosu";
 
 const router = createBrowserRouter(
     createRoutesFromElements(
@@ -25,6 +26,7 @@ const router = createBrowserRouter(
             <Route path="/bounce-string" element={<BounceString />} />
             <Route path="/rope" element={<Rope />} />
             <Route path="/gui" element={<Gui />} />
+            <Route path="/seoul-garosu" element={<SeoulGarosu />} />
         </Route>
     )
 );

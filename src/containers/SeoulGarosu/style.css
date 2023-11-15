@@ -1,0 +1,22 @@
+.seoul-garosu {
+    padding: 3rem;
+    line-height: 22px;
+}
+.seoul-garosu > video {
+    width: 100%;
+}
+.seoul-garosu > h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    margin-top: 1.5rem;
+    line-height: 32px;
+}
+.seoul-garosu > ul {
+    list-style: inside;
+}
+.seoul-garosu > ul > li {
+    list-style: inside;
+    text-indent: -20px;
+    padding-left: 20px;
+    margin-bottom: 0.5rem;
+}
