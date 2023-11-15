@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { PROJECT_LIST } from "../../../models/project";
 
 import "./style.css";
@@ -9,12 +10,12 @@ export default function Section4() {
             <ul>
                 {PROJECT_LIST.map((project) => (
                     <li key={project.title}>
-                        <a href={project.link}>
+                        <Link to={project.link}>
                             <img src={project.thumbnail} />
                             <div className="title">
                                 <div>{project.title}</div>
                             </div>
-                        </a>
+                        </Link>
                     </li>
                 ))}
             </ul>
