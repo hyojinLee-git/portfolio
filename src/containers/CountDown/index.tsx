@@ -31,7 +31,7 @@ export default function CountDown() {
 
         function createRing() {
             for (let i = 0; i < PARTICLE_NUM; i++) {
-                particles.push(new Particle());
+                particles.push(new Particle(canvasWidth, canvasHeight));
             }
         }
 
@@ -46,7 +46,7 @@ export default function CountDown() {
             ctx.clearRect(0, 0, canvasWidth, canvasHeight); // 이전 프레임을 지우고 새 프레임을 만듦
 
             for (let i = particles.length - 1; i >= 0; i--) {
-                particles[i].update();
+                particles[i].update(canvasWidth, canvasHeight);
                 particles[i].draw(ctx);
 
                 if (particles[i].opacity < 0) particles.splice(i, 1);

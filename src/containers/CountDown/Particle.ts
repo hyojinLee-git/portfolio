@@ -12,7 +12,7 @@ export default class Particle {
 
     x: number;
     y: number;
-    constructor() {
+    constructor(innerWidth: number, innerHeight: number) {
         this.rFriction = randomNumBetween(0.95, 1.01);
         this.rAlpha = randomNumBetween(0, 5);
         this.r = (Math.min(innerWidth, innerHeight) * 3) / 8;
@@ -26,7 +26,7 @@ export default class Particle {
         this.y = 0;
     }
 
-    update() {
+    update(innerWidth: number, innerHeight: number) {
         this.rAlpha *= this.rFriction;
         this.r += this.rAlpha;
 
