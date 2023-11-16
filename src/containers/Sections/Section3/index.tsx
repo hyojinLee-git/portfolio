@@ -4,12 +4,20 @@ export default function Section3() {
     return (
         <section className="section3">
             <h2 id="work-experience">Work Experice</h2>
-            <h3>픽앤주식회사(2022.03~현재)</h3>
+            <div>
+                <img src="/common/link_icon.png" alt="link" />
+                <h3>
+                    <a href="https://picknplan.com/">
+                        픽앤주식회사(2022.03~현재)
+                    </a>
+                </h3>
+            </div>
             <ul>
                 <li>
                     Nextjs+Typescript+Styled component를 이용해 픽앤플랜 보험
                     프로세스 및 내보험상품 웹뷰 파트 개발
                 </li>
+                <li>플래너 프로필 화면 및 질문답변 기능 구현</li>
                 <li>svg를 이용한 해약환급금 그래프 개발, 도넛차트 개발</li>
                 <li>백엔드와의 소통능력 계발</li>
             </ul>

@@ -11,6 +11,6 @@ header {
 
 @media (min-width: 768px) {
     main {
-        padding: 7rem;
+        padding: 3rem 7rem;
     }
 }

@@ -55,7 +55,7 @@ nav > ul > .active {
     background-color: white;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
-    padding: 15px 20px;
+    padding: 30px 20px 15px 20px;
     box-shadow: 2px 4px 6px 0px rgba(0, 0, 0, 0.06);
     animation: slideDown 0.8s;
     z-index: 0;
@@ -84,12 +84,13 @@ nav > ul > .active {
     display: grid;
     grid-template-columns: 1fr 1fr;
     row-gap: 5px;
+    column-gap: 30px;
 }
 
 #hamburger_menu > ul > li {
     color: var(--color-theme1);
     cursor: pointer;
-    font-size: 16px;
+    font-size: 1.2rem;
     line-height: 22px;
 }
 
@@ -99,7 +100,7 @@ nav > ul > .active {
 
 #hamburger_menu > ul > .active {
     color: var(--color-theme4);
-    font-size: 16px;
+    font-size: 1.2rem;
     font-weight: 500;
 }
 
